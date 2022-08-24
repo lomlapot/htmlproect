@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  
+  <title>htmlproect</title>
+  <script
+  src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"
+  
+  
+  ></script>
+</head>
+<body>
+
+	<div id="app">
+	  <!-- v-text  {{title }} -->
+	  	<h1 v-text ='title'></h1>
+	  	<!-- v-show -->
+	  	<h1 v-show=ok>Привет!</h1>
+	  	<jsont></jsont>
+	  	
+	  <ol>
+	     <li v-for ='i of items'>{{i}}</li> 
+	 </ol>   
+	     	  
+	  <p>
+	    {{message}} {{a}} 
+	  </p>
+	  
+	  <button @click ='toUper'>
+	    toUper
+	  </button>
+	  <button @click= 'increment'>
+	    increment
+	  </button>
+	  <button v-on:click ='decrement'>
+	    decrement
+	  </button>
+	  <hr>
+	  <input ref='name'></input>
+	  
+	  <button v-on:click ='focus'>
+	    focus
+	  </button>
+	  <!-- component hello 3 раза-->
+	  <hello name ='Petro' 
+	  fname ='litvin'></hello>
+	  <hello name ='Mia' fname ='litvin'></hello>
+	  <hello name ='Ira' 
+	  fname ='Romanovskaya' ></hello>
+	  
+	 <!-- <input v-model ='comment'> -->
+	 <input v-bind:value ='comment'
+	     v-on:input ='comment = $event.target.value'>
+	  <hr>	  
+	   <button @click=addComment >Push </button>
+	   <ul>
+	    <li v-for ='i in comments'>
+	        {{i}}
+	    </li> 	  
+	   </ul>
+	   <ol>
+	     <value1 val ='первый'></value1>
+	     <value1 val ='второй'></value1>
+	   </ol>
+	   <!-- сырой HTML -->
+	   <p>
+	     Двойные фигурные скобки: {{ rawHtml }}
+	   </p>
+    <p>
+      Директива v-html: 
+      <span v-html="rawHtml">       
+      </span>
+     </p>
+     
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>
+  
